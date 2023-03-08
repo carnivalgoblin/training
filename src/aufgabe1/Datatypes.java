@@ -1,6 +1,6 @@
 package aufgabe1;
 
-public class Aufgabe1 {
+public class Datatypes {
 
 
   // a) 5
