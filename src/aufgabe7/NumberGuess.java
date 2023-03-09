@@ -1,9 +1,9 @@
 package aufgabe7;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class NumberGuess {
+
 
   public static void main(String[] args) {
 
