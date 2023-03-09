@@ -16,9 +16,10 @@ public class NumberGuess {
 
     final int randomNumber = (int) (Math.random() * 100);
     boolean guessCorrect = false;
+    boolean tooManyTries = false;
     int usedTries = 1;
 
-    while (guessCorrect == false) {
+    while (guessCorrect == false && tooManyTries == false) {
       Scanner sc2 = new Scanner(System.in);
       System.out.println("Bitte gib eine Zahl ein:");
       int guess = Integer.parseInt(sc2.nextLine());
@@ -36,7 +37,7 @@ public class NumberGuess {
         usedTries++;
       } else if (guess != randomNumber && usedTries >= tries) {
         System.out.println("Du hast leider zu viele Versuche gebraucht. Die gesuchte Zahl war: " + randomNumber);
-        guessCorrect = true;
+        tooManyTries = true;
       }
 
     }
