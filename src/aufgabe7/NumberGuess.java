@@ -7,8 +7,10 @@ public class NumberGuess {
 
   public static void main(String[] args) {
 
+    System.out.println("----------------------------------------------------------------------------");
     System.out.println("In diesem Spiel wird eine zufällige Zahl zwischen 0 und 100 generiert.");
     System.out.println("Aufgabe ist es mit einer vorher festgelegten Anzahl an Versuchen die Zahl zu erraten.");
+    System.out.println("----------------------------------------------------------------------------");
 
     Scanner sc1 = new Scanner(System.in);
     System.out.println("Wieviele Versuche willst du haben?");
@@ -21,6 +23,7 @@ public class NumberGuess {
 
     while (guessCorrect == false && tooManyTries == false) {
       Scanner sc2 = new Scanner(System.in);
+      System.out.println("----------------------------------------------------------------------------");
       System.out.println("Bitte gib eine Zahl ein:");
       int guess = Integer.parseInt(sc2.nextLine());
 
