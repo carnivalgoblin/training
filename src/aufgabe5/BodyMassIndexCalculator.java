@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class BodyMassIndexCalculator {
 
-
-
   public static void main(String[] args) {
 
     Scanner inputHeight = new Scanner(System.in);
@@ -70,5 +68,3 @@ public class BodyMassIndexCalculator {
   }
 
 }
-
-
