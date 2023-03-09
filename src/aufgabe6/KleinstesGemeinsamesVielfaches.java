@@ -16,6 +16,8 @@ public class KleinstesGemeinsamesVielfaches {
 
     if (div1 <= 0 || div2 <= 0) {
       System.out.println("Bitte nur positive, ganze Zahlen eingeben.");
+    } else if (smallestDivisor(div1, div2) == 0) {
+      System.out.println("Wert liegt außerhalb der Berechnungsmöglichkeit.");
     } else {
       System.out.println("Das kleinste gemeinsame Vielfache von " + div1 + " und " + div2 + " ist " + smallestDivisor(div1, div2));
     }
@@ -23,14 +25,20 @@ public class KleinstesGemeinsamesVielfaches {
 
   public static int smallestDivisor(int div1, int div2) {
 
-    if (div1 > div2) {
+    if (div1 == div2) {
+      return div1;
+    } else if (div1 > div2) {
       int i = 1;
       int rest = div2 % div1;
       while (rest > 0) {
         rest = (div2 * i) % div1;
         i++;
       }
-      return (i - 1) * div2;
+      if (((i - 1) * div2) < 0) {
+        return 0;
+      } else {
+        return (i - 1) * div2;
+      }
     } else {
       int i = 1;
       int rest = div1 % div2;
