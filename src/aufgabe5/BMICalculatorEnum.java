@@ -1,5 +1,7 @@
 package aufgabe5;
 
+import java.util.Scanner;
+
 import static aufgabe5.BMICalculatorEnum.BmiClassisfication.*;
 
 public class BMICalculatorEnum {
@@ -13,8 +15,14 @@ public class BMICalculatorEnum {
 
   public static void main(String[] args) {
 
-    int heightInCentimeters = 184;
-    int weightInKilograms = 100;
+    Scanner inputHeight = new Scanner(System.in);
+    System.out.println("Größe in cm:");
+    int heightInCentimeters = Integer.parseInt(inputHeight.nextLine());
+
+    Scanner inputWeight = new Scanner(System.in);
+    System.out.println("Gewicht in kg:");
+    int weightInKilograms = Integer.parseInt(inputHeight.nextLine());
+
 
     System.out.println(classifyBmi(calculateBmi(heightInCentimeters, weightInKilograms)));
 

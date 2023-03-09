@@ -1,12 +1,20 @@
 package aufgabe5;
 
+import java.util.Scanner;
+
 public class BodyMassIndexCalculator {
 
 
 
   public static void main(String[] args) {
-    int heightInCentimeters = 184;
-    int weightInKilograms = 100;
+
+    Scanner inputHeight = new Scanner(System.in);
+    System.out.println("Größe in cm:");
+    int heightInCentimeters = Integer.parseInt(inputHeight.nextLine());
+
+    Scanner inputWeight = new Scanner(System.in);
+    System.out.println("Gewicht in kg:");
+    int weightInKilograms = Integer.parseInt(inputHeight.nextLine());
 
     final double bmi = calculateBmi(heightInCentimeters, weightInKilograms);
     final int bmiClass = classifyBmi(bmi);
