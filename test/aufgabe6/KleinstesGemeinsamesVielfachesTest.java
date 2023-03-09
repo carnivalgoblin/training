@@ -13,6 +13,13 @@ class KleinstesGemeinsamesVielfachesTest {
     int div2 = 5;
 
     assertTrue(KleinstesGemeinsamesVielfaches.smallestDivisor(div1, div2) == 15);
+  }
+
+  @Test
+  public void isNotSmallestCommonDivisor() {
+    int div1 = 3;
+    int div2 = 5;
+
     assertFalse(KleinstesGemeinsamesVielfaches.smallestDivisor(div1, div2) == 10);
     assertFalse(KleinstesGemeinsamesVielfaches.smallestDivisor(-div1, div2) == -15);
     assertFalse(KleinstesGemeinsamesVielfaches.smallestDivisor(-div1, div2) == 15);
