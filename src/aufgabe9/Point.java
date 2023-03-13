@@ -29,9 +29,9 @@ public class Point {
     if (chooseMethod.equals("add")) {
       Scanner sc1 = new Scanner(System.in);
       System.out.println("Bitte geben Sie den zu addierenden Vektor für die X Koordinate ein:");
-      double addX = scanner.nextDouble();
+      double addX = sc1.nextDouble();
       System.out.println("Bitte geben Sie den zu addierenden Vektor für die Y Koordinate ein:");
-      double addY = scanner.nextDouble();
+      double addY = sc1.nextDouble();
 
       addVector(addX, addY);
 
@@ -40,9 +40,9 @@ public class Point {
     } else if (chooseMethod.equals("sub")) {
       Scanner sc1 = new Scanner(System.in);
       System.out.println("Bitte geben Sie den zu subtrahierenden Vektor für die X Koordinate ein:");
-      double subX = scanner.nextDouble();
+      double subX = sc1.nextDouble();
       System.out.println("Bitte geben Sie den zu subtrahierenden Vektor für die Y Koordinate ein:");
-      double subY = scanner.nextDouble();
+      double subY = sc1.nextDouble();
 
       subtractVector(subX, subY);
 
@@ -51,9 +51,9 @@ public class Point {
     } else if (chooseMethod.equals("mul")) {
       Scanner sc1 = new Scanner(System.in);
       System.out.println("Bitte geben Sie den multipilzierenden Faktor für die X Koordinate ein:");
-      double mulX = scanner.nextDouble();
+      double mulX = sc1.nextDouble();
       System.out.println("Bitte geben Sie den multipilzierenden Faktro für die Y Koordinate ein:");
-      double mulY = scanner.nextDouble();
+      double mulY = sc1.nextDouble();
 
       multiplyVector(mulX, mulY);
 
@@ -62,9 +62,9 @@ public class Point {
     } else if (chooseMethod.equals("div")) {
       Scanner sc1 = new Scanner(System.in);
       System.out.println("Bitte geben Sie den dividierenden Faktor für die X Koordinate ein:");
-      double divX = scanner.nextDouble();
+      double divX = sc1.nextDouble();
       System.out.println("Bitte geben Sie den dividierenden Faktro für die Y Koordinate ein:");
-      double divY = scanner.nextDouble();
+      double divY = sc1.nextDouble();
 
       divideVector(divX, divY);
 
