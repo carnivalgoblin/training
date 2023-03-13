@@ -14,10 +14,10 @@ public class Main {
     Point p6 = p1.divide(2);
 
     System.out.println(p1 + ", " + p2);
-    System.out.println(p3);
-    System.out.println(p4);
-    System.out.println(p5);
-    System.out.println(p6);
+  //  System.out.println(p3);
+  //  System.out.println(p4);
+  //  System.out.println(p5);
+  //  System.out.println(p6);
 
     System.out.println(PointUtils.addPoints(p1, p2));
   }
