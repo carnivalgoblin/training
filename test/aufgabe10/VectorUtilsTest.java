@@ -51,4 +51,18 @@ class VectorUtilsTest {
     assertEquals(sVector.getY(), -1);
     assertEquals(sVector.getZ(), 0);
   }
+
+  @Test
+  void dotProductDivision() {
+    double dProductDivision = VectorUtils.dotProductDivision(v1, v2);
+
+    assertEquals(dProductDivision, 2.375);
+  }
+
+  @Test
+  void lengthVector() {
+    double lVector = VectorUtils.lengthVector(v1);
+
+    assertEquals(lVector, 10.488088481701515);
+  }
 }

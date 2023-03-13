@@ -10,11 +10,16 @@ public class Main {
 
     System.out.println(VectorUtils.dotProduct(v1, v2));
 
+    System.out.println(VectorUtils.dotProductDivision(v1, v2));
+
     System.out.println(VectorUtils.crossProduct(v1, v2));
 
     System.out.println(VectorUtils.addVector(v1, v2));
 
     System.out.println(VectorUtils.subtractVector(v1, v2));
+
+    System.out.println(VectorUtils.lengthVector(v1));
+
   }
 
 }
