@@ -10,7 +10,7 @@ public class VectorUtils {
     double tempY = v1.getY() * v2.getY();
     double tempZ = v1.getZ() * v2.getZ();
 
-    return (tempX  + tempY + tempZ);
+    return (tempX + tempY + tempZ);
   }
 
   public static double dotProductDivision(Vector v1, Vector v2) {
@@ -18,7 +18,7 @@ public class VectorUtils {
     double tempY = v1.getY() / v2.getY();
     double tempZ = v1.getZ() / v2.getZ();
 
-    return (tempX  + tempY + tempZ);
+    return (tempX + tempY + tempZ);
   }
 
   public static Vector crossProduct(Vector v1, Vector v2) {

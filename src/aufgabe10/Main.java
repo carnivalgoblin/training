@@ -8,17 +8,17 @@ public class Main {
     Vector v2 = new Vector(10,8,6);
 
 
-    System.out.println(VectorUtils.dotProduct(v1, v2));
-
-    System.out.println(VectorUtils.dotProductDivision(v1, v2));
-
-    System.out.println(VectorUtils.crossProduct(v1, v2));
-
-    System.out.println(VectorUtils.addVector(v1, v2));
-
-    System.out.println(VectorUtils.subtractVector(v1, v2));
-
-    System.out.println(VectorUtils.lengthVector(v1));
+    System.out.println("--------------------------------------------------------");
+    System.out.println("Vektor 1: " + v1);
+    System.out.println("Vektor 2: " + v2);
+    System.out.println("--------------------------------------------------------");
+    System.out.println("Skalarprodukt: " + VectorUtils.dotProduct(v1, v2));
+    System.out.println("Skalardivision: " + VectorUtils.dotProductDivision(v1, v2));
+    System.out.println("Kreuzprodukt: " + VectorUtils.crossProduct(v1, v2));
+    System.out.println("Vektoraddition: " + VectorUtils.addVector(v1, v2));
+    System.out.println("Vektorsubtraktion: " + VectorUtils.subtractVector(v1, v2));
+    System.out.println("Länge des Vektors: " + VectorUtils.lengthVector(v1));
+    System.out.println("--------------------------------------------------------");
 
   }
 
