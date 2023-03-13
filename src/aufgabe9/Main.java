@@ -18,6 +18,8 @@ public class Main {
     System.out.println(p4);
     System.out.println(p5);
     System.out.println(p6);
+
+    System.out.println(PointUtils.addPoints(p1, p2));
   }
 
 }
