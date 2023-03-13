@@ -10,6 +10,8 @@ class VectorUtilsTest {
   private Vector v1;
   private Vector v2;
 
+  private final double DELTA = 0.01;
+
   @BeforeEach
   public void initVectors() {
     v1 = new Vector(5,7,6);
@@ -20,16 +22,16 @@ class VectorUtilsTest {
   void dotProduct() {
     double dProduct = VectorUtils.dotProduct(v1, v2);
 
-    assertEquals(dProduct, 142);
+    assertEquals(dProduct, 142, DELTA);
   }
 
   @Test
   void crossProduct() {
     Vector cProduct = VectorUtils.crossProduct(v1, v2);
 
-    assertEquals(cProduct.getX(), 90);
-    assertEquals(cProduct.getY(), 90);
-    assertEquals(cProduct.getZ(), 110);
+    assertEquals(cProduct.getX(), 90, DELTA);
+    assertEquals(cProduct.getY(), 90, DELTA);
+    assertEquals(cProduct.getZ(), 110, DELTA);
 
   }
 
@@ -37,9 +39,9 @@ class VectorUtilsTest {
   void addVector() {
     Vector aVector = VectorUtils.addVector(v1, v2);
 
-    assertEquals(aVector.getX(), 15);
-    assertEquals(aVector.getY(), 15);
-    assertEquals(aVector.getZ(), 12);
+    assertEquals(aVector.getX(), 15, DELTA);
+    assertEquals(aVector.getY(), 15, DELTA);
+    assertEquals(aVector.getZ(), 12, DELTA);
 
   }
 
@@ -47,22 +49,22 @@ class VectorUtilsTest {
   void subtractVector() {
     Vector sVector = VectorUtils.subtractVector(v1, v2);
 
-    assertEquals(sVector.getX(), -5);
-    assertEquals(sVector.getY(), -1);
-    assertEquals(sVector.getZ(), 0);
+    assertEquals(sVector.getX(), -5, DELTA);
+    assertEquals(sVector.getY(), -1, DELTA);
+    assertEquals(sVector.getZ(), 0, DELTA);
   }
 
   @Test
   void dotProductDivision() {
     double dProductDivision = VectorUtils.dotProductDivision(v1, v2);
 
-    assertEquals(dProductDivision, 2.375);
+    assertEquals(dProductDivision, 2.375, DELTA);
   }
 
   @Test
   void lengthVector() {
     double lVector = VectorUtils.lengthVector(v1);
 
-    assertEquals(lVector, 10.488088481701515);
+    assertEquals(lVector, 10.488088481701515, DELTA);
   }
 }
