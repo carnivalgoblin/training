@@ -1,7 +1,5 @@
 package aufgabe10;
 
-import static java.lang.Math.sqrt;
-
 public class VectorUtils {
 
   /**
@@ -81,7 +79,8 @@ public class VectorUtils {
    * @return - double with the length of the Vector v1
    */
   public static double lengthVector(Vector v1) {
-    return Math.sqrt(v1.getX()* v1.getX() + v1.getY()* v1.getY() + v1.getZ()* v1.getZ());
+
+    return Math.sqrt(Math.pow(v1.getX(), 2) + Math.pow(v1.getY(), 2) + Math.pow(v1.getZ(), 2));
   }
 
 }

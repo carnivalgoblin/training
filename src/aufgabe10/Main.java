@@ -7,7 +7,6 @@ public class Main {
     Vector v1 = new Vector(5,7,6);
     Vector v2 = new Vector(10,8,6);
 
-
     System.out.println("--------------------------------------------------------");
     System.out.println("Vektor 1: " + v1);
     System.out.println("Vektor 2: " + v2);
