@@ -1,114 +1,14 @@
 package aufgabe9;
 
-import java.util.Scanner;
-
 public class Point {
 
-  // FIELDS
-  public static double x;
-  public static double y;
+  private double x;
+  private double y;
 
   // CONSTRUCTOR
-  public Point() {
-    Point.x = x;
-    Point.y = y;
-  }
-
-  // NEW OBJECT OF TYPE POINT
-  static Point p1 = new Point ();
-
-  public static void main(String[] args) {
-
-    Scanner inputX = new Scanner(System.in);
-    System.out.println("Bitte X Koordinate für neuen Punkt angeben:");
-    double newX = inputX.nextDouble();
-    p1.setX(newX);
-
-    Scanner inputY = new Scanner(System.in);
-    System.out.println("Bitte X Koordinate für neuen Punkt angeben:");
-    double newY = inputX.nextDouble();
-    p1.setY(newY);
-
-    System.out.println(p1);
-
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Möchten Sie die Koordinaten verändern? add/sub/mul/div/no");
-    String chooseMethod = scanner.nextLine();
-
-    // CALL ARITHMETIC METHODS
-    switch (chooseMethod) {
-      case "add" -> {
-        Scanner sc1 = new Scanner(System.in);
-        System.out.println("Bitte geben Sie den zu addierenden Vektor für die X Koordinate ein:");
-        double addX = sc1.nextDouble();
-        System.out.println("Bitte geben Sie den zu addierenden Vektor für die Y Koordinate ein:");
-        double addY = sc1.nextDouble();
-
-        addVector(addX, addY);
-
-        System.out.println("Neue Koordinaten: " + p1);
-
-      }
-      case "sub" -> {
-        Scanner sc1 = new Scanner(System.in);
-        System.out.println("Bitte geben Sie den zu subtrahierenden Vektor für die X Koordinate ein:");
-        double subX = sc1.nextDouble();
-        System.out.println("Bitte geben Sie den zu subtrahierenden Vektor für die Y Koordinate ein:");
-        double subY = sc1.nextDouble();
-
-        subtractVector(subX, subY);
-
-        System.out.println("Neue Koordinaten: " + p1);
-
-      }
-      case "mul" -> {
-        Scanner sc1 = new Scanner(System.in);
-        System.out.println("Bitte geben Sie den multipilzierenden Faktor für die X Koordinate ein:");
-        double mulX = sc1.nextDouble();
-        System.out.println("Bitte geben Sie den multipilzierenden Faktro für die Y Koordinate ein:");
-        double mulY = sc1.nextDouble();
-
-        multiplyVector(mulX, mulY);
-
-        System.out.println("Neue Koordinaten: " + p1);
-
-      }
-      case "div" -> {
-        Scanner sc1 = new Scanner(System.in);
-        System.out.println("Bitte geben Sie den dividierenden Faktor für die X Koordinate ein:");
-        double divX = sc1.nextDouble();
-        System.out.println("Bitte geben Sie den dividierenden Faktro für die Y Koordinate ein:");
-        double divY = sc1.nextDouble();
-
-        divideVector(divX, divY);
-
-        System.out.println("Neue Koordinaten: " + p1);
-
-      }
-      default -> System.out.println("Koordinaten nicht verändert.");
-    }
-
-  }
-
-  // ARITHMETIC METHODS
-  public static void addVector(double addX, double addY) {
-    x = x + addX;
-    y = y + addY;
-  }
-
-  public static void subtractVector(double subtractX, double subtractY) {
-    x = x - subtractX;
-    y = y - subtractY;
-  }
-
-  public static void multiplyVector(double multiplyX, double multiplyY) {
-    x = x * multiplyX;
-    y = y * multiplyY;
-  }
-
-  public static void divideVector(double divideX, double divideY) {
-    x = x / divideX;
-    y = y / divideY;
+  public Point(double x, double y) {
+    this.x = x;
+    this.y = y;
   }
 
   // SETTER & GETTER
@@ -117,7 +17,7 @@ public class Point {
   }
 
   public void setX(double x) {
-    Point.x = x;
+    this.x = x;
   }
 
   public double getY() {
@@ -125,15 +25,67 @@ public class Point {
   }
 
   public void setY(double y) {
-    Point.y = y;
+    this.y = y;
   }
 
-  // ToString
+  // TO-STRING
   @Override
   public String toString() {
     return "Point{" +
-            "X = " + x +
-            ", Y = " + y +
+            "x=" + x +
+            ", y=" + y +
             '}';
   }
+
+  // ARITHMETIC METHODS
+
+  /**
+   * Method to add two Point objects
+   * @param p - Point with x and y coordinates
+   * @return - Point with added values from p
+   */
+  public Point add(Point p) {
+    double newX = x + p.getX();
+    double newY = y + p.getY();
+
+    return new Point(newX, newY);
+  }
+
+  /**
+   * Method to subtract two Point objects
+   * @param p - Point with x and y coordinates
+   * @return - Point with subtracted values from p
+   */
+  public Point subtract(Point p) {
+    double newX = x - p.getX();
+    double newY = y - p.getY();
+
+    return new Point(newX, newY);
+  }
+
+  /**
+   * Method to multiply a Point object with p
+   * @param p - double to multiply the values of Point object
+   * @return - Point with multiplied values from p
+   */
+  public Point multiply(double p) {
+    double newX = x * p;
+    double newY = y * p;
+
+    return new Point(newX, newY);
+  }
+
+  /**
+   * Method to divide a Point object by p
+   * @param p - double to divide the values of Point object
+   * @return - Point with divided values from p
+   */
+  public Point divide(double p) {
+    double newX = x / p;
+    double newY = y / p;
+
+    return new Point(newX, newY);
+  }
+
 }
+
