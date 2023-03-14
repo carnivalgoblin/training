@@ -2,7 +2,7 @@ package aufgabe11;
 
 import aufgabe9.Point;
 
-public class Triangle implements GeometricCalculation {
+public class Triangle extends GeometricCalculation {
 
   private double triangleXP1;
   private double triangleYP1;
@@ -25,7 +25,7 @@ public class Triangle implements GeometricCalculation {
   // METHODS
   /**
    * Method to calculate circumference of a triangle
-   * @param t1 Triangle object with 3 Point objects to define corners
+   *
    * @return Circumference as double
    */
     public double calculateCircumference() {
@@ -34,12 +34,14 @@ public class Triangle implements GeometricCalculation {
     double length2 = Math.sqrt(Math.pow(this.getP2().getX(), 2) + Math.pow(this.getP2().getY(), 2));
     double length3 = Math.sqrt(Math.pow(this.getP3().getX(), 2) + Math.pow(this.getP3().getY(), 2));
 
-    return length1 + length2 + length3;
-  }
+    double circumference = length1 + length2 + length3;
+
+    this.setCircumference(circumference);
+    return circumference;
+    }
 
   /**
    * Method to calculate area of a triangle
-   * @param t1 Triangle object with 3 Point objects to define corners
    * @return Area as double
    */
     public double calculateArea() {
@@ -47,7 +49,10 @@ public class Triangle implements GeometricCalculation {
     double part2 = ( this.getP2().getX() * this.getP3().getY() - this.getP1().getY() );
     double part3 = ( this.getP3().getX() * this.getP1().getY() - this.getP2().getY() );
 
-    return (part1 + part2 + part3) / 2;
+    double area = (part1 + part2 + part3) / 2;
+
+    this.setArea(area);
+    return area;
   }
 
   // SETTER & GETTER
@@ -84,4 +89,11 @@ public class Triangle implements GeometricCalculation {
             '}';
   }
 
+  public void setArea(double area) {
+    this.area = area;
+  }
+
+  public double getArea() {
+    return area;
+  }
 }

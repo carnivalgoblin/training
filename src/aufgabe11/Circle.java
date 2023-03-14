@@ -2,7 +2,7 @@ package aufgabe11;
 
 import aufgabe9.Point;
 
-public class Circle implements GeometricCalculation{
+public class Circle extends GeometricCalculation {
 
   private double radius;
   private double p1;
@@ -26,19 +26,24 @@ public class Circle implements GeometricCalculation{
     public double calculateArea() {
     double radius = this.getRadius();
 
-    return Math.pow(radius,2) * Math.PI;
+    double area = Math.pow(radius,2) * Math.PI;
+    this.setArea(area);
+    return area;
   }
 
    /**
-   * Method to calculate circumference of a circle
-   * @param c1 Circle object with radius and Point object to mark center
-   * @return Circumference as double
-   */
+    * Method to calculate circumference of a circle
+    *
+    * @param c1 Circle object with radius and Point object to mark center
+    * @return Circumference as double
+    */
     public double calculateCircumference() {
     double radius = this.getRadius();
 
-    return 2 * radius * Math.PI;
-  }
+    double circumference = 2 * radius * Math.PI;
+    this.setCircumference(circumference);
+      return circumference;
+    }
 
   // SETTER & GETTER
   public double getRadius() {

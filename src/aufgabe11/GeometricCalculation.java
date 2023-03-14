@@ -1,9 +1,29 @@
 package aufgabe11;
 
-public interface GeometricCalculation {
+public abstract class GeometricCalculation {
 
-  public double calculateArea();
+  double area;
+  double circumference;
 
-  public double calculateCircumference();
+  // ABSTRACT METHODS
+  public abstract double calculateArea();
 
+  public abstract double calculateCircumference();
+
+  // GETTER & SETTER
+  public double getArea() {
+    return area;
+  }
+
+  public void setArea(double area) {
+    this.area = area;
+  }
+
+  public double getCircumference() {
+    return circumference;
+  }
+
+  public void setCircumference(double circumference) {
+    this.circumference = circumference;
+  }
 }
