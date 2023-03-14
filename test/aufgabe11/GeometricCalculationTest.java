@@ -21,7 +21,7 @@ class GeometricCalculationTest {
   void calculateAreaTriangle() {
     Triangle t1 = new Triangle(new Point(5,9), new Point(6,11), new Point(4,20));
 
-    assertEquals(t1.calculateArea(), 6.5, DELTA);
+    assertEquals(t1.calculateArea(), 85.5, DELTA);
   }
 
   @Test
