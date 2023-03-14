@@ -2,7 +2,7 @@ package aufgabe11;
 
 import aufgabe9.Point;
 
-public class Rectangle {
+public class Rectangle implements GeometricCalculation{
 
   private double rectangleXP1;
   private double rectangleYP1;
@@ -24,6 +24,37 @@ public class Rectangle {
     this.p2 = p2;
     this.p3 = p3;
     this.p4 = p4;
+  }
+
+  // METHODS
+
+  /**
+   * Method to calculate area of a rectangle
+   * @param r1 Rectangle object with 4 Point objects to mark corners
+   * @return Area as double
+   */
+  @Override
+  public double calculateArea() {
+    double height = this.getP3().getX();
+    double width = this.getP3().getY();
+
+    return height * width;
+  }
+
+  /**
+   * Method to calculate circumference of a rectangle
+   * @param r1 Rectangle object with 4 Point objects to mark corners
+   * @return Circumference as double
+   */
+  @Override
+  public double calculateCircumference() {
+    double length1 = Math.sqrt(Math.pow(this.getP1().getX(), 2) + Math.pow(this.getP1().getY(), 2));
+    double length2 = Math.sqrt(Math.pow(this.getP2().getX(), 2) + Math.pow(this.getP2().getY(), 2));
+    double length3 = Math.sqrt(Math.pow(this.getP3().getX(), 2) + Math.pow(this.getP3().getY(), 2));
+    double length4 = Math.sqrt(Math.pow(this.getP4().getX(), 2) + Math.pow(this.getP4().getY(), 2));
+
+    return length1 + length2 + length3 + length4;
+
   }
 
   // SETTER & GETTER
