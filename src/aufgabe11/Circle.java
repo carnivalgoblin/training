@@ -10,6 +10,12 @@ public class Circle implements GeometricCalculation {
 
   private Point center = new Point(p1, p2);
 
+  // CONSTRUCTOR
+  public Circle(double radius, Point center) {
+    this.radius = radius;
+    this.center = center;
+  }
+  // SETTER & GETTER
   public double getRadius() {
     return radius;
   }
@@ -23,11 +29,6 @@ public class Circle implements GeometricCalculation {
   }
 
   public void setCenter(Point center) {
-    this.center = center;
-  }
-
-  public Circle(double radius, Point center) {
-    this.radius = radius;
     this.center = center;
   }
 

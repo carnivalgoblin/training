@@ -18,6 +18,7 @@ public class Rectangle {
   private Point p3 = new Point(rectangleXP3, rectangleYP3);
   private Point p4 = new Point(rectangleXP4, rectangleYP4);
 
+  // CONSTRUCTOR
   public Rectangle(Point p1, Point p2, Point p3, Point p4) {
     this.p1 = p1;
     this.p2 = p2;
@@ -25,6 +26,7 @@ public class Rectangle {
     this.p4 = p4;
   }
 
+  // SETTER & GETTER
   public Point getP1() {
     return p1;
   }
