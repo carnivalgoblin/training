@@ -6,16 +6,16 @@ public class Person {
 
   // FIELDS
   int age;
-  String name;
-  String surname;
+  String firstName;
+  String lastName;
   int height; // in cm
   int weight; // in kg
 
   // CONSTRUCTOR
-  public Person(int age, String name, String surname, int height, int weight) {
+  public Person(int age, String firstName, String lastName, int height, int weight) {
     this.age = age;
-    this.name = name;
-    this.surname = surname;
+    this.firstName = firstName;
+    this.lastName = lastName;
     this.height = height;
     this.weight = weight;
   }
@@ -29,20 +29,20 @@ public class Person {
     this.age = age;
   }
 
-  public String getName() {
-    return name;
+  public String getFirstName() {
+    return firstName;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
   }
 
-  public String getSurname() {
-    return surname;
+  public String getLastName() {
+    return lastName;
   }
 
-  public void setSurname(String surname) {
-    this.surname = surname;
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
   }
 
   public int getHeight() {
@@ -66,8 +66,8 @@ public class Person {
   public String toString() {
     return "Person{" +
             "age=" + age +
-            ", name='" + name + '\'' +
-            ", surname='" + surname + '\'' +
+            ", name='" + firstName + '\'' +
+            ", surname='" + lastName + '\'' +
             ", height=" + height +
             ", weight=" + weight +
             '}';
@@ -78,11 +78,11 @@ public class Person {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     Person person = (Person) o;
-    return age == person.age && height == person.height && weight == person.weight && Objects.equals(name, person.name) && Objects.equals(surname, person.surname);
+    return age == person.age && height == person.height && weight == person.weight && Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(age, name, surname, height, weight);
+    return Objects.hash(age, firstName, lastName, height, weight);
   }
 }
