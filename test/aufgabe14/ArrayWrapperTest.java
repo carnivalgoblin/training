@@ -9,17 +9,19 @@ class ArrayWrapperTest {
   ArrayWrapper arr = new ArrayWrapper(6);
 
   @Test
-  void addedElementCorrectPosition() {
+  void shouldAddInteger() {
     arr.addElement(3,5);
 
-    assertTrue(arr.getElement(3) != 0);
+    assertEquals(arr.getArr(3), 5);
+    assertEquals(Integer.class, arr.getArr(3).getClass());
   }
 
   @Test
-  void getElementCorrect() {
-    arr.addElement(3,5);
+  void shouldAddString() {
+    arr.addElement(3,"Hello");
 
-    assertEquals(5, arr.getElement(3));
+    assertEquals(arr.getArr(3), "Hello");
+    assertEquals(String.class, arr.getArr(3).getClass());
   }
 
   @Test
@@ -28,10 +30,10 @@ class ArrayWrapperTest {
   }
 
   @Test
-  void elementCountCorrect() {
+  void shouldCountElements() {
     arr.addElement(3,5);
     arr.addElement(4,5);
 
-    assertEquals(arr.getElementCount(), 2);
+    assertEquals(2, arr.getElementCount());
   }
 }
