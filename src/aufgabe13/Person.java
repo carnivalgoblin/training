@@ -1,8 +1,9 @@
 package aufgabe13;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable<Person> {
 
   // FIELDS
   int age;
@@ -22,7 +23,7 @@ public class Person {
 
   // GETTER & SETTER
   public int getAge() {
-    return age;
+    return this.age;
   }
 
   public void setAge(int age) {
@@ -85,4 +86,26 @@ public class Person {
   public int hashCode() {
     return Objects.hash(age, firstName, lastName, height, weight);
   }
+
+  @Override
+  public int compareTo(Person o) {
+    return Integer.compare(getAge(), o.getAge());
+  }
+
+  public static class SortByAge implements Comparator<Person> {
+
+     public int compare(Person o1, Person o2) {
+      return o1.getAge() - o2.getAge();
+    }
+  }
+
+  public static class SortByHeight implements Comparator<Person> {
+
+     public int compare(Person o1, Person o2) {
+      return o1.getHeight() - o2.getHeight();
+    }
+  }
+
+
+
 }
