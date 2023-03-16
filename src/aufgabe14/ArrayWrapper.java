@@ -1,29 +1,29 @@
 package aufgabe14;
 
-public class ArrayWrapper<T> {
+public class ArrayWrapper <T> {
 
 
-  private Object[] arr;
+  private T[] arr;
   private int arrSize;
   private int elementCount;
 
   // CONSTRUCTOR
   public ArrayWrapper(int arrSize) {
-    this.arr = new Object [arrSize];
+    this.arr = (T[]) new Object[arrSize];
     this.arrSize = arrSize;
   }
 
   // METHODS
-  public void addElement(int pos,Object e) {
+  public void addElement(int pos,T e) {
     if (pos <= arrSize) {
-      this.arr[pos] = e;
+      arr[pos] = e;
     } else {
-      Object[] tempArr = new Object[arrSize*2];
+      T[] tempArr = (T[]) new Object[arrSize*2];
       for (int i = 0; i < arr.length; ++i) {
         tempArr[i] = arr[i];
       }
       arr = tempArr;
-      this.arr[pos] = e;
+      arr[pos] = e;
     }
   }
 
@@ -42,9 +42,7 @@ public class ArrayWrapper<T> {
 
   // GETTER & SETTER
   T getArr(int i) {
-    @SuppressWarnings("unchecked")
-    final T t = (T)arr[i];
-    return t;
+    return arr[i];
   }
 
   void setArr(int i, T t) {

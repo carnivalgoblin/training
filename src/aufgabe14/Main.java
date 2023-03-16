@@ -5,10 +5,11 @@ public class Main {
 
   public static void main(String[] args) {
 
-    ArrayWrapper arr = new ArrayWrapper(6);
+    ArrayWrapper<Integer> arr = new ArrayWrapper<>(6);
+    ArrayWrapper<String> stringArr = new ArrayWrapper<>(6);
 
     arr.addElement(1,4);
-    arr.addElement(0,"Hello");
+    stringArr.addElement(0,"Hello");
 
     System.out.println(arr.getArraySize());
     System.out.println(arr.getElementCount());
