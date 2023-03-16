@@ -2,6 +2,8 @@ package aufgabe13;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PersonTest {
@@ -22,6 +24,18 @@ class PersonTest {
 
     assertNotEquals(p1, p2);
 
+  }
+
+  @Test
+  void shouldHashMap() {
+    HashMap<Integer, Person> personMap = new HashMap<Integer, Person>();
+
+    personMap.put(1, p1);
+    personMap.put(2, p2);
+    personMap.put(3, p3);
+
+    assertEquals(personMap.get(1).hashCode(), personMap.get(3).hashCode());
+    assertNotEquals(personMap.get(1).hashCode(), personMap.get(2).hashCode());
   }
 
 }

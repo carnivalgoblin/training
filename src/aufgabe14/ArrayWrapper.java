@@ -1,5 +1,8 @@
 package aufgabe14;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class ArrayWrapper <T> {
 
 
@@ -52,4 +55,5 @@ public class ArrayWrapper <T> {
   public void setArrSize(int arrSize) {
     this.arrSize = arrSize;
   }
+
 }
