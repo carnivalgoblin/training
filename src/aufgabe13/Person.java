@@ -1,13 +1,20 @@
 package aufgabe13;
 
+import aufgabe20.CSVEntity;
+import aufgabe20.CSVField;
+
 import java.util.Comparator;
 import java.util.Objects;
 
+@CSVEntity
 public class Person implements Comparable<Person> {
 
   // FIELDS
+  @CSVField
   int age;
+  @CSVField
   String firstName;
+  @CSVField
   String lastName;
   int height; // in cm
   int weight; // in kg
@@ -105,7 +112,5 @@ public class Person implements Comparable<Person> {
       return o1.getHeight() - o2.getHeight();
     }
   }
-
-
 
 }

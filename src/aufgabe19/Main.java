@@ -20,7 +20,7 @@ public class Main  {
     persons.add(p3);
 
     System.out.println("Before: " + persons);
-    persons.sort(new Person.SortByAge());
+    persons.sort(new Person.SortByAge().reversed());
     System.out.println("After sorting by Age: " + persons);
     System.out.println("----------------------------------------------------------");
     System.out.println("Before: " + persons);
